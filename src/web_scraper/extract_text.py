@@ -26,8 +26,8 @@ def retrieve_poem_text(url):
         soup = BeautifulSoup(response.content, 'lxml')
         content = soup.get_text()
 
-        author_name = process_text.get_author()
-        poem_title = process_text.get_title()
+        author_name = process_text.get_author(content)
+        poem_title = process_text.get_title(content)
         poem_text = process_text.get_poem()
 
 

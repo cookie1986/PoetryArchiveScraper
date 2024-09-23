@@ -6,17 +6,17 @@ from src.web_scraper.extract_text import retrieve_poem_text
 
 def main():
 
-    # ensure config is imported and initialized
+    # Ensure that config is imported and initialized
     config.initialize()
     
-    # list of sitemaps
+    # List of sitemaps
     sitemaps = [
         'https://poetryarchive.org/poems-sitemap.xml',
         'https://poetryarchive.org/poems-sitemap2.xml',
         'https://poetryarchive.org/poems-sitemap3.xml',
     ]
 
-    # search sitemaps for urls and compile as list
+    # Search each sitemap for URLs and compile as list
     poem_urls = []
     for link in sitemaps:
         try:
@@ -28,7 +28,7 @@ def main():
 
     logging.info(f"{len(poem_urls)} poem URLs extracted from sitemaps.")
 
-    # extract text from each url and store as plain text file
+    # Extract text from each url and store as plain text file
     poem_urls = poem_urls[:1] # filtered dataset for debugging..........
     for poem in poem_urls:
         retrieve_poem_text(poem)

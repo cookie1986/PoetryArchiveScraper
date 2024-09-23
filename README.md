@@ -4,6 +4,13 @@ A simple web scraper to access a poetry archive and store as plain text files.
 ## Installation
 
 
+## Running Tests
+
+To run the test suite, navigate to the project root directory and execute the following command:
+
+```bash
+PYTHONPATH=. pytest -s
+```
 
 ## Compliance with robots.txt
 Before scraping the website, it's essential to check that the intended actions comply with the site's `robots.txt` file, which specifies the rules for web crawlers and scraping bots. Here are the steps taken to ensure compliance:
